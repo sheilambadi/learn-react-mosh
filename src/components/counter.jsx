@@ -7,21 +7,31 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"]
   };
 
+  handleIncrement() {
+    console.log("Increment clicked!");
+  }
+
   render() {
     return (
       <React.Fragment>
         {/* <img src={this.state.imageUrl} alt="No Image" /> */}
-        {/* <span className={this.getBadgeClass()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Click me</button>
-        <ul>
+        <span className={this.getBadgeClass()}>{this.formatCount()}</span>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
+
+        {/* <ul>
           {this.state.tags.map(tag => (
             <li key={tag}>{tag}</li>
           ))}
         </ul> */}
 
-        {this.state.tags.length === 0 && "No tags to display"}
+        {/* {this.state.tags.length === 0 && "No tags to display"}
 
-        {this.renderTags()}
+        {this.renderTags()} */}
       </React.Fragment>
     );
   }

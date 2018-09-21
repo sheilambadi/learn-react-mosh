@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 // Stateless Functional Component
 
-const Navbar = props => {
+const Navbar = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <a className="navbar-brand text-white" href="">
         Navbar{" "}
         <span className="badge badge-pill badge-secondary">
-          {props.totalCounters}
+          {totalCounters}
         </span>
       </a>
     </nav>
